@@ -27,40 +27,55 @@ export class Gameboard {
       throw new Error("Invalid location");
     }
 
-    while(length > 1){
-      switch (direction) {
-        case "up":
-          if (this.isValidLocation([location[0] - 1, location[1]])) {
+    switch (direction) {
+      case "up":
+        if (this.isValidLocation([location[0] - length, location[1]])) {
+          while(length > 1){
             location = [location[0] - 1, location[1]];
             this.board[location[0]][location[1]] = newShip;
             length--;
-          } else {
-            throw new Error("Invalid location");
           }
-          break;
-        case "right":
-          if (this.isValidLocation([location[0], location[1] + 1])) {
+        } else {
+          throw new Error("Invalid location");
+        }
+        break;
+      case "right":
+        if (this.isValidLocation([location[0], location[1] + length])) {
+          while(length > 1){
             location = [location[0], location[1] + 1];
             this.board[location[0]][location[1]] = newShip;
             length--;
-          } else {
-            throw new Error("Invalid location");
           }
-          break;
-        case "down":
-          if (this.isValidLocation([location[0] + 1, location[1]])) {
+        } else {
+          throw new Error("Invalid location");
+        }
+        break;
+      case "down":
+        if (this.isValidLocation([location[0] + length, location[1]])) {
+          while(length > 1){
             location = [location[0] + 1, location[1]];
             this.board[location[0]][location[1]] = newShip;
             length--;
-          } else {
-            throw new Error("Invalid location");
           }
-          break;
-        default:
-          throw new Error("Unsupported direction");
-      }
+        } else {
+          throw new Error("Invalid location");
+        }
+        break;
+      case "left":
+        if (this.isValidLocation([location[0], location[1] - length])) {
+          while(length > 1){
+            location = [location[0], location[1] -1];
+            this.board[location[0]][location[1]] = newShip;
+            length--;
+          }
+        } else {
+          throw new Error("Invalid location");
+        }
+        break;
+      default:
+        throw new Error("Unsupported direction");
     }
-  }
+}
 
   isValidLocation(location) {
     if(this.board[location[0]] == undefined){
