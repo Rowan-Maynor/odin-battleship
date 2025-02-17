@@ -23,4 +23,12 @@ export class Gameboard {
 
     this.board[location[0]][location[1]] = newShip;
   }
+
+  isValidLocation(location) {
+    if(this.board[location[0]][location[1]]){
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
