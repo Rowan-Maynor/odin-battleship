@@ -3,16 +3,16 @@ import { Ship } from "./ship.js";
 export class Gameboard {
   constructor() {
     this.board = [
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
-      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
     ];
     this.ships = [];
   }
