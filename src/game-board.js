@@ -30,14 +30,16 @@ export class Gameboard {
     while(length > 1){
       switch (direction) {
         case "up":
-          if(this.isValidLocation([location[0] + 1, location[1]])){
-            location = [location[0] + 1, location[1]];
-            this.board[location[0][location[1]]] = newShip;
+          if(this.isValidLocation([location[0] - 1, location[1]])){
+            location = [location[0] - 1, location[1]];
+            this.board[location[0]][location[1]] = newShip;
             length--;
           } else {
             throw new Error("Invalid location");
           }
           break;
+        default:
+          throw new Error("Unsupported direction");
       }
     }
   }
