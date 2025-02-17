@@ -1,4 +1,5 @@
 import { Gameboard } from "../src/game-board";
+import { Ship } from "../src/ship";
 
 let gameBoard;
 
@@ -20,6 +21,11 @@ test("Gameboard initializes correctly", ()=> {
     [null, null, null, null, null, null, null, null, null, null],
   ]);
 });
+
+test("Adds new ships to array", () => {
+  gameBoard.createShip(2);
+  expect(gameBoard.ships[0]).toEqual(typeof Ship);
+})
 
 test("Creates ships pointing up", () => {
   gameBoard.createShip(2, [5][5], up);
