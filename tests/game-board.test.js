@@ -1,5 +1,5 @@
-import { Gameboard } from "../src/game-board";
-import { Ship } from "../src/ship";
+import { Gameboard } from "../src/game-board.js";
+import { Ship } from "../src/ship.js";
 
 let gameBoard;
 
