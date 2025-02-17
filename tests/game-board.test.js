@@ -31,7 +31,7 @@ test("Throws error if initial placement is invalid", () => {
   expect(() => gameBoard.createShip(2, [11, 1], "right")).toThrow("Invalid location")
 });
 
-test.skip("Creates ships pointing up", () => {
+test("Creates ships pointing up", () => {
   gameBoard.createShip(2, [5, 5], "up");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[4][5]).toEqual(gameboard.ships[0]);
