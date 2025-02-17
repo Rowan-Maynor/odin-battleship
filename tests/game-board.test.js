@@ -22,12 +22,12 @@ test("Gameboard initializes correctly", ()=> {
   ]);
 });
 
-test.skip("Adds new ships to array", () => {
+test("Adds new ships to array", () => {
   gameBoard.createShip(2, [0, 0], "right");
   expect(gameBoard.ships[0] instanceof Ship).toEqual(true);
 });
 
-test.skip("Throws error if initial placement is invalid", () => {
+test("Throws error if initial placement is invalid", () => {
   expect(() => gameBoard.createShip(2, [11, 1], "right")).toThrow("Invalid location")
 });
 
@@ -43,7 +43,7 @@ test.skip("Creates ships pointing left", () => {
   expect(gameBoard.board[5][4]).toEqual(gameBoard.ships[0]);
 });
 
-test.skip("Creates ships pointing right", () => {
+test("Creates ships pointing right", () => {
   gameBoard.createShip(2, [5, 5], "right");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[5][6]).toEqual(gameBoard.ships[0]);
