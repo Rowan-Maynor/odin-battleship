@@ -37,8 +37,8 @@ export class Gameboard {
           } else {
             throw new Error("Invalid location");
           }
+          break;
       }
-
     }
   }
 
