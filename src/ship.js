@@ -7,5 +7,12 @@ export class Ship {
 
   hit() {
     this.hits++;
+    this.checkIfSunk();
+  }
+
+  checkIfSunk() {
+    if(this.hits == this.length){
+      this.isSunk = true;
+    }
   }
 }
