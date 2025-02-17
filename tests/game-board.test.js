@@ -24,7 +24,7 @@ test("Gameboard initializes correctly", ()=> {
 
 test("Adds new ships to array", () => {
   gameBoard.createShip(2);
-  expect(gameBoard.ships[0]).toEqual(typeof Ship);
+  expect(gameBoard.ships[0] instanceof Ship).toEqual(true);
 })
 
 test("Creates ships pointing up", () => {
