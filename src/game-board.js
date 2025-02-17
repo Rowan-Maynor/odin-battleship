@@ -1,4 +1,4 @@
-export class Gameboard {
+export default class Gameboard {
   constructor() {
     this.board = [
       [null, null, null, null, null, null, null, null, null, null],
