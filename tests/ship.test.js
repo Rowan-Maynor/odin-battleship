@@ -18,7 +18,7 @@ test("Ship registers hits", () => {
 });
 
 test("Ship handles being sunk", () =>{
-  ship.hits = ship.length - 1;
-  ship.hit();
+  ship.hits = ship.length;
+  ship.checkIfSunk();
   expect(ship.isSunk).toBe(true);
 });
