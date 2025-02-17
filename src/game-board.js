@@ -1,3 +1,5 @@
+import { Ship } from "./ship";
+
 export class Gameboard {
   constructor() {
     this.board = [
