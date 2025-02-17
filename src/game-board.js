@@ -21,7 +21,11 @@ export class Gameboard {
     let newShip = new Ship(length);
     this.ships.push(newShip);
 
-    this.board[location[0]][location[1]] = newShip;
+    if(this.isValidLocation(location)){
+      this.board[location[0]][location[1]] = newShip;
+    } else {
+      throw new Error("Invalid location");
+    }
   }
 
   isValidLocation(location) {
