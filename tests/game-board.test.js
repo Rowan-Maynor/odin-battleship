@@ -28,25 +28,25 @@ test("Adds new ships to array", () => {
 });
 
 test("Creates ships pointing up", () => {
-  gameBoard.createShip(2, [5, 5], up);
+  gameBoard.createShip(2, [5, 5], "up");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[4][5]).toEqual(gameboard.ships[0]);
 });
 
 test("Creates ships pointing left", () => {
-  gameBoard.createShip(2, [5, 5], left);
+  gameBoard.createShip(2, [5, 5], "left");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[5][4]).toEqual(gameboard.ships[0]);
 });
 
 test("Creates ships pointing right", () => {
-  gameBoard.createShip(2, [5, 5], right);
+  gameBoard.createShip(2, [5, 5], "right");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[5][6]).toEqual(gameboard.ships[0]);
 });
 
 test("Creates ships pointing down", () => {
-  gameBoard.createShip(2, [5, 5], down);
+  gameBoard.createShip(2, [5, 5], "down");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[6][5]).toEqual(gameboard.ships[0]);
 });
