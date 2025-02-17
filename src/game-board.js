@@ -29,10 +29,11 @@ export class Gameboard {
   }
 
   isValidLocation(location) {
-    if(this.board[location[0]][location[1]]){
-      return true;
-    } else {
+    if(this.board[location[0]] == undefined){
+      return false;
+    } else if (this.board[location[0]][location[1]] == undefined) {
       return false;
     }
+    return true;
   }
 }
