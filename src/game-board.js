@@ -29,7 +29,7 @@ export class Gameboard {
 
     switch (direction) {
       case "up":
-        if (this.isValidLocation([location[0] - length, location[1]])) {
+        if (this.isValidLocation([location[0] - (length - 1), location[1]])) {
           while(length > 1){
             location = [location[0] - 1, location[1]];
             this.board[location[0]][location[1]] = newShip;
@@ -40,7 +40,7 @@ export class Gameboard {
         }
         break;
       case "right":
-        if (this.isValidLocation([location[0], location[1] + length])) {
+        if (this.isValidLocation([location[0], location[1] + (length - 1)])) {
           while(length > 1){
             location = [location[0], location[1] + 1];
             this.board[location[0]][location[1]] = newShip;
@@ -51,7 +51,7 @@ export class Gameboard {
         }
         break;
       case "down":
-        if (this.isValidLocation([location[0] + length, location[1]])) {
+        if (this.isValidLocation([location[0] + (length - 1), location[1]])) {
           while(length > 1){
             location = [location[0] + 1, location[1]];
             this.board[location[0]][location[1]] = newShip;
@@ -62,7 +62,7 @@ export class Gameboard {
         }
         break;
       case "left":
-        if (this.isValidLocation([location[0], location[1] - length])) {
+        if (this.isValidLocation([location[0], location[1] - (length - 1)])) {
           while(length > 1){
             location = [location[0], location[1] -1];
             this.board[location[0]][location[1]] = newShip;
