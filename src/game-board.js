@@ -1,5 +1,5 @@
 export class Gameboard {
-  constructor(){
+  constructor() {
     this.board = [
       [null, null, null, null, null, null, null, null, null, null],
       [null, null, null, null, null, null, null, null, null, null],
@@ -13,5 +13,10 @@ export class Gameboard {
       [null, null, null, null, null, null, null, null, null, null],
     ];
     this.ships = [];
+  }
+
+  createShip(length, location, direction) {
+    let newShip = new Ship(length);
+    this.ships.push(newShip);
   }
 }
