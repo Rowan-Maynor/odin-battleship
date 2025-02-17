@@ -70,6 +70,12 @@ test("Creates ships pointing right", () => {
   expect(gameBoard.board[5][9]).toEqual(gameBoard.ships[0]);
 });
 
+test("Throws error if any right cell is out of bounds", () => {
+  expect(() => gameBoard.createShip(2, [9, 9], "right")).toThrow(
+    "Invalid location",
+  );
+});
+
 test("Creates ships pointing down", () => {
   gameBoard.createShip(5, [5, 5], "down");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
