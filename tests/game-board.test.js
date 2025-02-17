@@ -84,3 +84,9 @@ test("Creates ships pointing down", () => {
   expect(gameBoard.board[8][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[9][5]).toEqual(gameBoard.ships[0]);
 });
+
+test("Throws error if any downward cell is out of bounds", () => {
+  expect(() => gameBoard.createShip(2, [9, 9], "down")).toThrow(
+    "Invalid location",
+  );
+});
