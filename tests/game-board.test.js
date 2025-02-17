@@ -37,7 +37,7 @@ test("Creates ships pointing up", () => {
   expect(gameBoard.board[4][5]).toEqual(gameBoard.ships[0]);
 });
 
-test.skip("Creates ships pointing left", () => {
+test("Creates ships pointing left", () => {
   gameBoard.createShip(2, [5, 5], "left");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
   expect(gameBoard.board[5][4]).toEqual(gameBoard.ships[0]);
