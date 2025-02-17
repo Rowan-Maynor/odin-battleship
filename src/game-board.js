@@ -12,5 +12,6 @@ export class Gameboard {
       [null, null, null, null, null, null, null, null, null, null],
       [null, null, null, null, null, null, null, null, null, null],
     ];
+    this.ships = new Array(5);
   }
 }
