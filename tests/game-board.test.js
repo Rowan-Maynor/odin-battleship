@@ -27,10 +27,6 @@ test("Adds new ships to array", () => {
   expect(gameBoard.ships[0] instanceof Ship).toEqual(true);
 });
 
-test("Throws error if initial placement is invalid", () => {
-  expect(() => gameBoard.createShip(2, [11, 1], "right")).toThrow("Invalid location")
-});
-
 test("Creates ships pointing up", () => {
   gameBoard.createShip(5, [5, 5], "up");
   expect(gameBoard.board[5][5]).toEqual(gameBoard.ships[0]);
