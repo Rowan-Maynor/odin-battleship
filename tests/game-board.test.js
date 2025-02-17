@@ -9,16 +9,16 @@ beforeEach(() => {
 
 test("Gameboard initializes correctly", ()=> {
   expect(gameBoard.board).toEqual([
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null, null],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
   ]);
 });
 
