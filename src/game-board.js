@@ -3,16 +3,16 @@ import { Ship } from "./ship.js";
 export class Gameboard {
   constructor() {
     this.board = [
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
-      [null, null, null, null, null, null, null, null, null, null],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+      ["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
     ];
     this.ships = [];
   }
