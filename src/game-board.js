@@ -21,18 +21,12 @@ export class Gameboard {
     let newShip = new Ship(length);
     this.ships.push(newShip);
 
-    if(this.isValidLocation(location)){
-      this.board[location[0]][location[1]] = newShip;
-    } else {
-      throw new Error("Invalid location");
-    }
-
     switch (direction) {
       case "up":
         if (this.isValidLocation([location[0] - (length - 1), location[1]])) {
-          while(length > 1){
-            location = [location[0] - 1, location[1]];
+          while(length > 0){
             this.board[location[0]][location[1]] = newShip;
+            location = [location[0] - 1, location[1]];
             length--;
           }
         } else {
@@ -41,9 +35,9 @@ export class Gameboard {
         break;
       case "right":
         if (this.isValidLocation([location[0], location[1] + (length - 1)])) {
-          while(length > 1){
-            location = [location[0], location[1] + 1];
+          while(length > 0){
             this.board[location[0]][location[1]] = newShip;
+            location = [location[0], location[1] + 1];
             length--;
           }
         } else {
@@ -52,9 +46,9 @@ export class Gameboard {
         break;
       case "down":
         if (this.isValidLocation([location[0] + (length - 1), location[1]])) {
-          while(length > 1){
-            location = [location[0] + 1, location[1]];
+          while(length > 0){
             this.board[location[0]][location[1]] = newShip;
+            location = [location[0] + 1, location[1]];
             length--;
           }
         } else {
@@ -63,9 +57,9 @@ export class Gameboard {
         break;
       case "left":
         if (this.isValidLocation([location[0], location[1] - (length - 1)])) {
-          while(length > 1){
-            location = [location[0], location[1] -1];
+          while(length > 0){
             this.board[location[0]][location[1]] = newShip;
+            location = [location[0], location[1] -1];
             length--;
           }
         } else {
