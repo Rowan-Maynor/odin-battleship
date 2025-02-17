@@ -6,7 +6,7 @@ beforeEach(() => {
   ship = new Ship(4);
 });
 
-test("Ship initializes correctly", ()=>{
+test("Ship initializes correctly", () => {
   expect(ship.length).toBeGreaterThan(0);
   expect(ship.hits).toBe(0);
   expect(ship.isSunk).toBe(false);
@@ -17,7 +17,7 @@ test("Ship registers hits", () => {
   expect(ship.hits).toBe(1);
 });
 
-test("Ship handles being sunk", () =>{
+test("Ship handles being sunk", () => {
   ship.hits = ship.length;
   ship.checkIfSunk();
   expect(ship.isSunk).toBe(true);
