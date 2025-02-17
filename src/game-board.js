@@ -38,6 +38,15 @@ export class Gameboard {
             throw new Error("Invalid location");
           }
           break;
+        case "right":
+          if(this.isValidLocation([location[0], location[1] + 1])){
+            location = [location[0], location[1] + 1];
+            this.board[location[0]][location[1]] = newShip;
+            length--;
+          } else {
+            throw new Error("Invalid location");
+          }
+          break;          
         default:
           throw new Error("Unsupported direction");
       }
