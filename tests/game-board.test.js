@@ -208,3 +208,8 @@ test("Board registers missed attacks", () => {
   gameBoard.receiveAttack(5, 5);
   expect(gameBoard.board[5][5]).toEqual("miss");
 });
+
+test("Throws error when selecting a previous location", () => {
+  gameBoard.receiveAttack(5, 5);
+  expect(() => gameBoard.receiveAttack(5, 5)).toThrow("Location already attacked");
+})
