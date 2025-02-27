@@ -181,6 +181,17 @@ export class Gameboard {
     }
   }
 
+  receiveAttack(x, y){
+    if(this.board[x][y] == "hit" || this.board[x][y] == "miss"){
+      throw new Error("Location already attacked");
+    } else if (this.board[x][y] == "empty"){
+      this.board[x][y] = "miss";
+    } else {
+      this.board[x][y].hits++;
+      this.board[x][y] = "hit";
+    }
+  }
+
   isValidLocation(location) {
     if (this.board[location[0]] == undefined) {
       return false;
