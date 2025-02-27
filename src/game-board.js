@@ -192,7 +192,7 @@ export class Gameboard {
     }
   }
 
-  isSunk(){
+  isSunkCheck(){
     for(const ship of this.ships){
       if(ship.isSunk == false){
         return false;
