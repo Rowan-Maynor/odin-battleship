@@ -199,6 +199,6 @@ test("Throws error if any downward cell is out of bounds", () => {
 
 test("Ships can receive attacks", () => {
   gameBoard.createShip(5, [5, 5], "down");
-  gameBoard.receiveAttack(gameBoard.ships[0]);
-  expect(gameBoard.ships[0].hits).toEqual(1);
-})
+  gameBoard.receiveAttack(5, 5);
+  expect(gameBoard.board[5][5]).toEqual("hit");
+});
