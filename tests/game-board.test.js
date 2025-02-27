@@ -201,6 +201,7 @@ test("Ships can receive attacks", () => {
   gameBoard.createShip(5, [5, 5], "down");
   gameBoard.receiveAttack(5, 5);
   expect(gameBoard.board[5][5]).toEqual("hit");
+  expect(gameBoard.ships[0].hits).toEqual(1);
 });
 
 test("Board registers missed attacks", () => {
