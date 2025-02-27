@@ -15,4 +15,9 @@ export class GameState {
   startGame(){
     this.setupPhase = false;
   }
+
+  resetGame(){
+    this.playerTurn = "Player 1";
+    this.setupPhase = true;
+  }
 }
