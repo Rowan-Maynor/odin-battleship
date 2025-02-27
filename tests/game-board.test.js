@@ -223,3 +223,8 @@ test("Returns true if all ships are sunk", () => {
   gameBoard.ships[0].hit();
   expect(gameBoard.isSunk()).toEqual(true);
 });
+
+test("Returns false if ships are still active", () => {
+  gameBoard.createShip(5, [5, 5], "down");
+  expect(gameBoard.isSunk()).toEqual(false);
+})
