@@ -21,4 +21,12 @@ test("GameState updates player turn", () => {
 test("GameState updates setupPhase on game start", () => {
   gameState.startGame();
   expect(gameState.setupPhase).toEqual(false);
-})
+});
+
+test("GameStat resets propely", () => {
+  gameState.changeTurn();
+  gameState.startGame();
+  gameState.restartGame();
+  expect(gameState.playerTurn).toEqual("Player 1");
+  expect(gameState.setupPhase).toEqual(true);
+});
