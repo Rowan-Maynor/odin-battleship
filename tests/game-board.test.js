@@ -197,8 +197,8 @@ test("Throws error if any downward cell is out of bounds", () => {
   );
 });
 
-test("Ships can recieve attacks", () => {
+test("Ships can receive attacks", () => {
   gameBoard.createShip(5, [5, 5], "down");
-  gameBoard.recieveAttack(gameBoard.ships[0]);
+  gameBoard.receiveAttack(gameBoard.ships[0]);
   expect(gameBoard.ships[0].hits).toEqual(1);
 })
