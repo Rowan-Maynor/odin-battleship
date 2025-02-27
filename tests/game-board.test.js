@@ -213,3 +213,13 @@ test("Throws error when selecting a previous location", () => {
   gameBoard.receiveAttack(5, 5);
   expect(() => gameBoard.receiveAttack(5, 5)).toThrow("Location already attacked");
 });
+
+test("Returns true if all ships are sunk", () => {
+  gameBoard.createShip(5, [5, 5], "down");
+  gameBoard.ships[0].hit();
+  gameBoard.ships[0].hit();
+  gameBoard.ships[0].hit();
+  gameBoard.ships[0].hit();
+  gameBoard.ships[0].hit();
+  expect(gameBoard.isSunk()).toEqual(true);
+});
