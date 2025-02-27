@@ -196,3 +196,9 @@ test("Throws error if any downward cell is out of bounds", () => {
     "Invalid location",
   );
 });
+
+test("Ships can recieve attacks", () => {
+  gameBoard.createShip(5, [5, 5], "down");
+  gameBoard.recieveAttack(gameBoard.ships[0]);
+  expect(gameBoard.ships[0].hits).toEqual(1);
+})
