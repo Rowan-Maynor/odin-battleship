@@ -17,3 +17,8 @@ test("GameState updates player turn", () => {
   gameState.changeTurn();
   expect(gameState.playerTurn).toEqual("Player 1");
 });
+
+test("GameState updates setupPhase on game start", () => {
+  gameState.startGame();
+  expect(gameState.setupPhase).toEqual(false);
+})
