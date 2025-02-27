@@ -192,6 +192,15 @@ export class Gameboard {
     }
   }
 
+  isSunk(){
+    for(const ship of this.ships){
+      if(ship.isSunk == false){
+        return false;
+      }
+    }
+    return true;
+  }
+
   isValidLocation(location) {
     if (this.board[location[0]] == undefined) {
       return false;
